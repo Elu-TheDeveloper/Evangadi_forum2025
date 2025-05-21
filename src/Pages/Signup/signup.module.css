@@ -7,7 +7,7 @@
 .container{
     background-image: url(../../assets/images/bg.svg);
     width: 100%;
-    height: 100vh;
+    height: auto;
     margin-top: 50px;
     margin-bottom: 50px;
     background-repeat: no-repeat;
@@ -52,17 +52,20 @@ color: #2D385E;
     border-radius: 5px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
     width: 500px; 
-    height:400px;
+    height:auto;
     margin: 20px auto;
     margin-left: 80px;
-    margin-top: 50px;
+    margin-top: 20px;
+    
 }
 .login i{
     margin-left: 80px;
 }
+
 .login h3{
     text-align: center;
     font-size: 24px;
+    margin-top: 150px;
     margin-top: 50px;
     color: #2D385E;
     font-family: "Lato", sans-serif;
@@ -110,11 +113,16 @@ button{
  .login input {
     font-size: 16px;
     width: 100%;
+    height: auto;
     padding: 12px 20px !important; 
     border: 2px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
 }
+.login form > * {
+  margin-bottom: 10px;
+}
+
 .loginwrapper{
     display: flex;
     justify-content: center;
@@ -251,3 +259,70 @@ h3{
     flex: 1;
     min-width: 0;
   }
+  @media (max-width: 768px) {
+  .loginwrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .login {
+    width: 90%;
+    margin: 20px auto;
+    padding: 30px;
+  }
+
+  .rightsidewrapper {
+    width: 90%;
+    margin-top: 20px;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .rightsidewrapper h1 {
+    font-size: 22px;
+  }
+
+  .rightsidewrapper p {
+    font-size: 16px;
+  }
+
+  .opencv {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .nav {
+    padding: 0 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav a {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .logo img {
+    margin-left: 0 !important;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+}

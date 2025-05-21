@@ -42,7 +42,7 @@ function Question() {
 
   return (
     <div>
-      <form className={styles.loginX} onSubmit={handleSubmit}>
+      <form className={styles.loginX1} onSubmit={handleSubmit}>
         <input ref={titledom} type="text" placeholder="Title" />
         <input ref={descdom} type="text" placeholder="Description" />
         <input ref={tagdom} type="text" placeholder="Tag (e.g. React, SQL)" />

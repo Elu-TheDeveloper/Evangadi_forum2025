@@ -2,10 +2,6 @@ import { useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from '../Axiosconfig';
 import stylesX from "../../Pages/Signup/signup.module.css"
-import logo from "../../assets/images/logo.png"
-import evangadilogo from '../../assets/images/evangadi.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faYoutube, faInstagram } from '@fortawesome/free-brands-svg-icons';
 function Register() {
   const navigate = useNavigate()
   const userNamedom = useRef();
@@ -50,19 +46,11 @@ function Register() {
   
   return (
     <div className={stylesX.container}>
-          <div className={stylesX.header}>
-            <img src={evangadilogo} alt="Evangadi Logo" />
-            <div className={stylesX.nav}>
-              <a href="#">Home</a>
-              <a href="#">How it Works</a>
-              <button className={stylesX.signin} type="button">SIGN IN</button>
-            </div>
-          </div>
           <div className={stylesX.loginwrapper}>
             <div className={stylesX.login}>
               <h3>Join the network</h3>
               <li>
-              Already have an account? <Link to="/register">Sign in</Link>
+              Already have an account? <Link to="/login">Sign in</Link>
               </li>
               <form className={stylesX.loginX} onSubmit={handleSubmit}>
                 <input ref={emaildom} type="email" placeholder="Email" />
@@ -73,9 +61,7 @@ function Register() {
                 <input ref={userNamedom} type="text" placeholder='Username' />
                 <input ref={passwordom} type="password" placeholder="Password" />
                 <button type="submit">Register</button>
-                <li>
-                <Link to="/register">Create Account</Link>
-                </li>
+              
                 
               </form>
             </div>
@@ -97,36 +83,7 @@ function Register() {
             </div>
           </div>
     
-          <div className={stylesX.footer}>
-            <div className={stylesX.links}>
-              <li>
-                <img src={logo} alt="Evangadi Footer Logo" />
-              </li>
-              <ul className={stylesX.socialIcons}>
-                <li><FontAwesomeIcon icon={faFacebook} /></li>
-                <li><FontAwesomeIcon icon={faInstagram} /></li>
-                <li><FontAwesomeIcon icon={faYoutube} /></li>
-              </ul>
-            </div>
-    
-            <div className={stylesX.links}>
-              <h3>Useful Link</h3>
-              <ul>
-                <li><a href="#">How it Works</a></li>
-                <li><a href="#">Terms of Service</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-              </ul>
-            </div>
-    
-            <div className={stylesX.links}>
-              <h3>Contact Info</h3>
-              <ul>
-                <li>Evangadi Networks</li>
-                <li>support@evagadi.com</li>
-                <li>+1-202-386-2702</li>
-              </ul>
-            </div>
-          </div>
+        
         </div>
   
   )

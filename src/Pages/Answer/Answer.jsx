@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Appcontext } from '../../App';
 import style from "../Login/login.module.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleUser, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faCircleUser} from '@fortawesome/free-solid-svg-icons';
 
 function AnswersPage() {
   const { questionid } = useParams();
@@ -97,14 +97,16 @@ if (res.ok){
         <p>No answers yet.</p>
       )}
 
-      <form onSubmit={handleSubmit} className={style.answer_form}>
-        <input type='text' className={style.answer_box}
-          value={newAnswer}
-          onChange={(e) => setNewAnswer(e.target.value)}
-          placeholder="Write your answer..."
-        />
-        <button type="submit">Post Answer</button>
-      </form>
+<form onSubmit={handleSubmit} className={style.answer_form}>
+  <textarea
+    className={style.answer_box}
+    value={newAnswer}
+    onChange={(e) => setNewAnswer(e.target.value)}
+    placeholder="Write your answer..."
+    rows={8}
+  />
+  <button type="submit">Post Answer</button>
+</form>
       
 {successMsg && (
   <p style={{ color: successMsg.includes('') ? 'green' : 'red', fontWeight: 'bold' }}>

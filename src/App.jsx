@@ -58,7 +58,6 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/answers/:questionid" element={<AnswersPage />} />
         <Route path="/question/" element = {<Question/>}/>
-        
       </Routes>
     </Appcontext.Provider>
   );
