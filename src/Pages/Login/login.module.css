@@ -69,7 +69,7 @@ body {
 }
 
 .login {
-  background-color: #fff;
+  background-color: #FCFBFB;
   padding: 50px;
   border-radius: 5px;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
@@ -93,6 +93,11 @@ body {
   margin: 10px 0;
   border: 2px solid #ccc;
   border-radius: 5px;
+}
+.login button{
+  margin-top: 50px;
+  justify-content: center;
+  margin-bottom: 25px;
 }
 
 .login li {
@@ -131,7 +136,7 @@ button {
 
 .rightsidewrapper {
   width: 50%;
-  background-color: #fff;
+  background-color: #FCFBFB;
   padding: 80px;
 }
 
@@ -308,7 +313,6 @@ button {
     padding: 30px;
     height: auto;
   }
-
   .rightsidewrapper {
     width: 100%;
     padding: 30px;
@@ -516,7 +520,7 @@ button  {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: 0.3s;
 }
 
 button:hover {
@@ -524,4 +528,11 @@ button:hover {
 }
 .author{
   display: inline-block;
+}
+.author a{
+  color: white;
+  text-decoration: none;
+}
+.author a:hover{
+  text-decoration: underline;
 }

@@ -39,7 +39,7 @@ function Footer() {
               </ul>
             </div>
              <div className={styles.author}>
-<h2>Built By Eliyas Daba</h2>
+<a href="https://www.linkedin.com/in/eliyas-daba-b5793b27a/"><h2>Built By Eliyas Daba</h2></a>
             </div>
           </div>
      

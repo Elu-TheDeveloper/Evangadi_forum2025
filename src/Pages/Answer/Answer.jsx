@@ -82,7 +82,7 @@ if (res.ok){
         </>
       )}
 
-      <h3>Answers</h3>
+      <h4>Answers</h4>
       {answers.length > 0 ? (
         answers.map((answer, index) => (
           <div key={index} className={style.answer_card}>
@@ -103,7 +103,7 @@ if (res.ok){
     value={newAnswer}
     onChange={(e) => setNewAnswer(e.target.value)}
     placeholder="Write your answer..."
-    rows={8}
+    rows={4}
   />
   <button type="submit">Post Answer</button>
 </form>

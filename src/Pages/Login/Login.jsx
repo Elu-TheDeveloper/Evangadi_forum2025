@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from '../Axiosconfig';
 import styles from '../Login/login.module.css';
@@ -7,6 +7,7 @@ function Login() {
   const navigate = useNavigate();
   const emaildom = useRef();
   const passwordom = useRef();
+  const [successMsg, setSuccessMsg]=useState('')
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -14,7 +15,8 @@ function Login() {
     const passwordValue = passwordom.current.value;
 
     if (!emailValue || !passwordValue) {
-      alert('Please fill all required information');
+   setSuccessMsg('Please fill all required information');
+    setTimeout(() => setSuccessMsg(''), 5000);
       return;
     }
 
@@ -24,13 +26,19 @@ function Login() {
         password: passwordValue,
       });
 
-      alert('Successfully Logged In.');
       localStorage.setItem('token_id', data.token);
-      navigate('/');
+        setSuccessMsg('Successfully Login');
+      setTimeout(() => {
+        setSuccessMsg('');
+        navigate('/');
+      }, 2000);
+
+    
       console.log(data);
     } catch (error) {
-      alert(error?.response?.data?.msg || 'Login failed');
-      console.log(error.response);
+     setSuccessMsg('Please Enter correct username and password');
+      console.log(error.response || error.message);
+      setTimeout(() => setSuccessMsg(''), 10000);
     }
   }
 
@@ -49,7 +57,11 @@ function Login() {
             <li>
             <Link to="/register">Create Account</Link>
             </li>
-            
+             {successMsg && (
+        <p style={{ color: successMsg === 'Login Successfully' ? 'green' : 'red', fontWeight: 'bold' }}>
+          {successMsg}
+        </p>
+      )}
           </form>
         </div>
 
