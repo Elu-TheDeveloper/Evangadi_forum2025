@@ -35,8 +35,11 @@ function Footer() {
               <ul>
                 <li>Evangadi Networks</li>
                 <li>support@evagadi.com</li>
-                <li>+1-202-386-2702</li>
+                <li>+1-202-486-2702</li>
               </ul>
+            </div>
+             <div className={styles.author}>
+<h2>Built By Eliyas Daba</h2>
             </div>
           </div>
      
